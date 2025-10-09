@@ -29,8 +29,7 @@ jobs:
           docker exec $(docker ps -qf "name=nginx") nginx -t
 
       - name: Arrêt des conteneurs
-        run: docker-compose down
-
+        run: docker compose down
 
   deploy:
     name: Deploy to Pre-Prod VPS
@@ -57,5 +56,5 @@ jobs:
             cd lamp-nginx-tplaser
             git clone https://github.com/${{ github.repository }} .
             git checkout main
-            docker-compose down || true
-            docker-compose up -d --build
+            docker compose down || true
+            docker compose up -d --build
