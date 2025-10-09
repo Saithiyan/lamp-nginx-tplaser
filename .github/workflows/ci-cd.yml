@@ -38,7 +38,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - name: Checkout du dépôt
+      - name: Checkout du depot
         uses: actions/checkout@v4
 
       - name: Déploiement via SSH sur le VPS
