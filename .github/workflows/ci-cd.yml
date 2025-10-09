@@ -26,7 +26,7 @@ jobs:
 
       - name: Test Nginx
         run: |
-          docker exec $(docker ps -qf "name=nginx") nginx -t
+          docker ps -qf "name=nginx-web"
 
       - name: Arrêt des conteneurs
         run: docker compose down

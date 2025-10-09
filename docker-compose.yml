@@ -23,7 +23,7 @@ services:
     ports:
       - 8080:8080
 
-  nginx:
+  nginx-web:
     image: nginx:latest
     volumes:
       - ./docker/nginx/conf:/etc/nginx/conf.d
