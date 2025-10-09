@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  build-test:
+  build-and-test:
     name: Build and Test Containers
     runs-on: ubuntu-latest
     steps:
