@@ -50,6 +50,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             set -e
+            echo ${{ secrets.VPS_HOST }}
             cd ~/lamp-nginx-tplaser || mkdir -p ~/lamp-nginx-tplaser && cd ~/lamp-nginx-tplaser
             rm -rf lamp-nginx-tplaser
             mkdir lamp-nginx-tplaser
